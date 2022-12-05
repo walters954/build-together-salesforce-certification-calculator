@@ -1,14 +1,34 @@
-# Salesforce DX Project: Next Steps
+# Salesforce Certification Calculator
+## _Salesforce Mentor - Build Together_
 
-Now that you’ve created a Salesforce DX project, what’s next? Here are some documentation resources to get you started.
+A month-long project you build on a team of 2-3 with other learning Salesforce developers. Small teams will work together to complete development assignments. A weekly meeting with experienced developers to go over questions and review code. Get actual hands-on experience by working on projects, in a team with requirements.
 
-## How Do You Plan to Deploy Your Changes?
+## Overview
+Create to calculate the weighted score from Salesforce certifications available on Trailhead. Use LWC, HTML, JS, CSS, and other Salesforce development frameworks to create a UI and backend to dynamically render and calculate the scores. 
+[All certification calculations can be found on Trailhead on the exam guides.](https://trailhead.salesforce.com/en/credentials/administratoroverview/)
 
-Do you want to deploy a set of changes, or create a self-contained application? Choose a [development model](https://developer.salesforce.com/tools/vscode/en/user-guide/development-models).
+## Project Requirements  
+- Ability to select multiple certifications to calculate score - fields will be dynamic
+- Button to initiate the calculate functionality 
+- Once calculated show your score compared to the score needed to pass
+- Error check if a field is blank - all fields are required
 
-## Configure Your Salesforce DX Project
+## Examples
+- https://scuvanov.github.io/SalesforceCertScoreCalculator
+- https://focusonforce.com/salesforce-certification-score-checker
+- https://levelupsalesforce.com/saleforce-certification-calculator
 
-The `sfdx-project.json` file contains useful configuration information for your project. See [Salesforce DX Project Configuration](https://developer.salesforce.com/docs/atlas.en-us.sfdx_dev.meta/sfdx_dev/sfdx_dev_ws_config.htm) in the _Salesforce DX Developer Guide_ for details about this file.
+## Dev Requirements
+- Must have completed and sent a review of Apex Fundamentals
+- Must use SFDX, git, GitHub, and visual studio code
+- Your code should be able to run in any playground org via a GitHub repo
+- Must be able to commit to meeting weekly with a large group
+- SLDS and LWC Library must be used for lightning web components
+
+## Notes
+- Build Together is meant to be challenging. You will be asked to figure things out with your team. Sr. Dev will guide you but not a full outline of what you should be doing. Asking questions is the more important thing.
+- You can use other resources but don’t just copy it word for word. You should be able to explain what your code is doing.
+- Team members are meant to keep each other accountable, but if a team member is not pulling their weight, they will be cut.
 
 ## Read All About It
 
@@ -16,3 +36,9 @@ The `sfdx-project.json` file contains useful configuration information for your 
 - [Salesforce CLI Setup Guide](https://developer.salesforce.com/docs/atlas.en-us.sfdx_setup.meta/sfdx_setup/sfdx_setup_intro.htm)
 - [Salesforce DX Developer Guide](https://developer.salesforce.com/docs/atlas.en-us.sfdx_dev.meta/sfdx_dev/sfdx_dev_intro.htm)
 - [Salesforce CLI Command Reference](https://developer.salesforce.com/docs/atlas.en-us.sfdx_cli_reference.meta/sfdx_cli_reference/cli_reference.htm)
+
+## License
+
+MIT
+
+**Free Software, Hell Yeah!**
