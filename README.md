@@ -1,5 +1,5 @@
 # Salesforce Certification Calculator
-## _Salesforce Mentor - Build Together_
+### _[Salesforce Mentor - Build Together](https://courses.salesforcementor.com/)_
 
 A month-long project you build on a team of 2-3 with other learning Salesforce developers. Small teams will work together to complete development assignments. A weekly meeting with experienced developers to go over questions and review code. Get actual hands-on experience by working on projects, in a team with requirements.
 
@@ -12,6 +12,11 @@ Create to calculate the weighted score from Salesforce certifications available 
 - Button to initiate the calculate functionality 
 - Once calculated show your score compared to the score needed to pass
 - Error check if a field is blank - all fields are required
+
+## Getting Started
+- Fork this repository and (if team leader) [invite team members to repo](https://docs.github.com/en/account-and-profile/setting-up-and-managing-your-personal-account-on-github/managing-access-to-your-personal-repositories/inviting-collaborators-to-a-personal-repository) 
+- Clone the forked repo onto your local computer and open the folder in Visual Studio Code
+- Connect to your playground org and start coding! 
 
 ## Examples
 - https://scuvanov.github.io/SalesforceCertScoreCalculator
