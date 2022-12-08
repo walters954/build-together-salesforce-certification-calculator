@@ -5,13 +5,16 @@ A month-long project you build on a team of 2-3 with other learning Salesforce d
 
 ## Overview
 Create to calculate the weighted score from Salesforce certifications available on Trailhead. Use LWC, HTML, JS, CSS, and other Salesforce development frameworks to create a UI and backend to dynamically render and calculate the scores. 
-[All certification calculations can be found on Trailhead on the exam guides.](https://trailhead.salesforce.com/en/credentials/administratoroverview/)
+[All certification calculations can be found on Trailhead on the exam guides.](https://trailhead.salesforce.com/en/credentials/administratoroverview/) 
+- Initially start with PD1 then change program to be dynamic.
 
 ## Project Requirements  
-- Ability to select multiple certifications to calculate score - fields will be dynamic
+- ~~Ability to select multiple certifications to calculate score - fields will be dynamic~~
+- Ability to input certification scored for each section of platform developer 1 certification
 - Button to initiate the calculate functionality 
 - Once calculated show your score compared to the score needed to pass
 - Error check if a field is blank - all fields are required
+- Should work in a Salesforce as stand alone component or on record page
 
 ## Getting Started
 - Fork this repository and (if team leader) [invite team members to repo](https://docs.github.com/en/account-and-profile/setting-up-and-managing-your-personal-account-on-github/managing-access-to-your-personal-repositories/inviting-collaborators-to-a-personal-repository) 
@@ -23,7 +26,7 @@ Create to calculate the weighted score from Salesforce certifications available 
 - https://focusonforce.com/salesforce-certification-score-checker
 - https://levelupsalesforce.com/saleforce-certification-calculator
 
-## Dev Requirements
+## Development Requirements
 - Must have completed and sent a review of Apex Fundamentals
 - Must use SFDX, git, GitHub, and visual studio code
 - Your code should be able to run in any playground org via a GitHub repo
@@ -31,8 +34,11 @@ Create to calculate the weighted score from Salesforce certifications available 
 - SLDS and LWC Library must be used for lightning web components
 
 ## Development Outline
-
-1. Create an LWC
+1. Create a LWC - Name: Salesforce Certification Calculator
+2. HTML - Create inputs for the users values - 4 inputs (Developer Fundamentals, Process Automation and Logic, User Interface,Testing, Debugging, and Deployment)
+3. HTML - Text for the overall score
+4. HTML - Create calculate button
+5. JS - Calculate button press call the JS function to update the overall score
 
 ## Notes
 - Build Together is meant to be challenging. You will be asked to figure things out with your team. Sr. Dev will guide you but not a full outline of what you should be doing. Asking questions is the more important thing.
