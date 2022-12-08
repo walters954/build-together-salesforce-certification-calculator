@@ -32,6 +32,8 @@ Create to calculate the weighted score from Salesforce certifications available 
 
 ## Development Outline
 
+1. Create an LWC
+
 ## Notes
 - Build Together is meant to be challenging. You will be asked to figure things out with your team. Sr. Dev will guide you but not a full outline of what you should be doing. Asking questions is the more important thing.
 - You can use other resources but don’t just copy it word for word. You should be able to explain what your code is doing.
