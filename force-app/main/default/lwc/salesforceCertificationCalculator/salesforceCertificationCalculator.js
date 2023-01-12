@@ -10,6 +10,11 @@ export default class SalesforceCertificationCalculator extends LightningElement 
     certificationScore = 0;
 
     handleChange(event) {
+        console.log(event);
+        console.log(JSON.parse(JSON.stringify(event.target)));
+        console.log(event.target.name);
+        console.log(event.target.value);
+        console.log(event.target.type);
         const field = event.target.name;
         if (field === 'devFundamentals') {
             this.developerFundamentals = event.target.value;
