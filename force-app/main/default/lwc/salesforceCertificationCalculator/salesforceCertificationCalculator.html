@@ -1,6 +1,9 @@
 <template>
     <lightning-card  title="Certification Calculator">
-    <lightning-button slot="actions" label="Calculate" title="Calculate" onclick={calculate} class="slds-m-left_x-small"></lightning-button>
+    <lightning-button-group slot="actions" class="slds-p-left_large">
+        <lightning-button  label="Reset" title="Reset" onclick={reset}></lightning-button>
+        <lightning-button  label="Calculate" title="Calculate" onclick={calculate} variant="brand"></lightning-button>
+    </lightning-button-group>
         <div class="slds-p-horizontal_small">
             <lightning-input type="number" name="devFundamentals" label="Developer Fundamentals: 23%" value={developerFundamentals} onchange={handleChange} min="0" max="100"></lightning-input>
             <lightning-input type="number" name="processAuto" label="Process Automation and Logic: 30%" value={processAutomation} onchange={handleChange} min="0" max="100"></lightning-input>
@@ -8,7 +11,9 @@
             <lightning-input type="number" name="testing" label="Testing, Debugging, and Deployment: 22%" value={testingDebug} onchange={handleChange} min="0" max="100"></lightning-input>
         </div>
         <div slot="footer" class="slds-m-vertical_medium">
-            <p>Your certification score is: <span class="slds-text-heading_small">{certificationScore}%</span></p>
+            <div class="slds-p-around_medium slds-box">
+                <p>Your certification score is: <span class="slds-text-heading_small">{certificationScore}%</span></p>
+            </div>
         </div>
     </lightning-card>
 </template>

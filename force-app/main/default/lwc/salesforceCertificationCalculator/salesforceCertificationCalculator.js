@@ -2,10 +2,10 @@ import { LightningElement } from 'lwc';
 
 export default class SalesforceCertificationCalculator extends LightningElement {
 
-    developerFundamentals;
-    processAutomation;
-    userInterface;
-    testingDebug;
+    developerFundamentals = 0;
+    processAutomation = 0;
+    userInterface = 0;
+    testingDebug = 0;
 
     certificationScore = 0;
 
@@ -33,6 +33,14 @@ export default class SalesforceCertificationCalculator extends LightningElement 
         let userInterfaceWeight = this.userInterface * .25;
         let testingDebugWeight = this.testingDebug * .22;
         this.certificationScore = developerFundamentalWeight + processAutomationWeight + userInterfaceWeight + testingDebugWeight;
+    }
+
+    reset(){
+        this.developerFundamentals = 0;
+        this.processAutomation = 0;
+        this.userInterface = 0;
+        this.testingDebug = 0;
+        this.certificationScore = 0;
     }
 
 }
