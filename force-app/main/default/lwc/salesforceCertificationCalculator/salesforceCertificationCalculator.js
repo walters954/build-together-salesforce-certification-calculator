@@ -6,15 +6,9 @@ export default class SalesforceCertificationCalculator extends LightningElement 
     processAutomation = 0;
     userInterface = 0;
     testingDebug = 0;
-
     certificationScore = 0;
 
     handleChange(event) {
-        console.log(event);
-        console.log(JSON.parse(JSON.stringify(event.target)));
-        console.log(event.target.name);
-        console.log(event.target.value);
-        console.log(event.target.type);
         const field = event.target.name;
         if (field === 'devFundamentals') {
             this.developerFundamentals = event.target.value;
@@ -28,6 +22,11 @@ export default class SalesforceCertificationCalculator extends LightningElement 
     }
 
     calculate() {
+        //validate input values before doing calculations
+        if (!this.validateInputs()){
+            return;
+        }
+
         let developerFundamentalWeight = this.developerFundamentals * .23;
         let processAutomationWeight = this.processAutomation * .30;
         let userInterfaceWeight = this.userInterface * .25;
@@ -41,6 +40,26 @@ export default class SalesforceCertificationCalculator extends LightningElement 
         this.userInterface = 0;
         this.testingDebug = 0;
         this.certificationScore = 0;
+    }
+
+    //https://developer.salesforce.com/docs/component-library/bundle/lightning-input/documentation
+    validateInputs(){
+        const allValid = [
+            ...this.template.querySelectorAll('lightning-input'),
+        ].reduce((validSoFar, inputCmp) => {
+
+            //Required to check if the input has a value or not
+            if (!inputCmp.value){
+                inputCmp.setCustomValidity('Value is required');
+            } else {
+                inputCmp.setCustomValidity('');
+            }
+
+            inputCmp.reportValidity();
+            return validSoFar && inputCmp.checkValidity() ;
+        }, true);
+
+        return allValid;
     }
 
 }
