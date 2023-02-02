@@ -12,7 +12,12 @@
         </div>
         <div slot="footer" class="slds-m-vertical_medium">
             <div class="slds-p-around_medium slds-box">
+                <!-- confettie for passing -->
+                <!-- Pass or fail message -->
                 <p>Your certification score is: <span class="slds-text-heading_small">{certificationScore}%</span></p>
+                <p>Score needed to pass: <span class="slds-text-heading_small">{certificationPassScore}%</span></p>
+                <p>Category Break Down</p>
+                <p>Developer Fundamentals: Number of Questions In Section - {developerFundamentalsCorrectQuestions}/~{developerFundamentalsTotalQuestions} </p>
             </div>
         </div>
     </lightning-card>

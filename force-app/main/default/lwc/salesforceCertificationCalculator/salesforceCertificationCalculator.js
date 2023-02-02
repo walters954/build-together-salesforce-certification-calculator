@@ -7,6 +7,16 @@ export default class SalesforceCertificationCalculator extends LightningElement 
     userInterface = 0;
     testingDebug = 0;
     certificationScore = 0;
+    certificationPassScore = 68;
+    numberOfQuestion = 60;
+    developerFundamentalsWeight = .23;
+    processAutomationWeight = .30;
+    userInterfaceWeight = .25;
+    testingDebugWeight = .22;
+    developerFundamentalScore = 0;
+    processAutomationScore = 0;
+    userInterfaceScore = 0;
+    testingDebugScore = 0;
 
     handleChange(event) {
         const field = event.target.name;
@@ -27,11 +37,12 @@ export default class SalesforceCertificationCalculator extends LightningElement 
             return;
         }
 
-        let developerFundamentalWeight = this.developerFundamentals * .23;
-        let processAutomationWeight = this.processAutomation * .30;
-        let userInterfaceWeight = this.userInterface * .25;
-        let testingDebugWeight = this.testingDebug * .22;
-        this.certificationScore = developerFundamentalWeight + processAutomationWeight + userInterfaceWeight + testingDebugWeight;
+        this.developerFundamentalScore = this.developerFundamentals * this.developerFundamentalsWeight;
+        this.processAutomationScore = this.processAutomation * this.processAutomationWeight;
+        this.userInterfaceScore = this.userInterface * this.userInterfaceWeight;
+        this.testingDebugScore = this.testingDebug * this.testingDebugWeight;
+        this.certificationScore = this.developerFundamentalScore + this.processAutomationScore + this.userInterfaceScore + this.testingDebugScore;
+        this.certificationScore = Math.round(this.certificationScore);
     }
 
     reset(){
@@ -60,6 +71,16 @@ export default class SalesforceCertificationCalculator extends LightningElement 
         }, true);
 
         return allValid;
+    }
+
+    get developerFundamentalsTotalQuestions(){
+        return Math.round(this.numberOfQuestion * this.developerFundamentalsWeight);
+    }
+
+    get developerFundamentalsCorrectQuestions(){
+        let weightedScore = this.developerFundamentalScore/this.developerFundamentalsWeight
+        weightedScore = weightedScore / 100; //get weighted percentage
+        return Math.round(weightedScore * this.developerFundamentalsTotalQuestions);
     }
 
 }
