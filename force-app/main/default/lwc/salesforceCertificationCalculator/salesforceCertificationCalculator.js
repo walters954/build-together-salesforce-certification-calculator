@@ -83,4 +83,50 @@ export default class SalesforceCertificationCalculator extends LightningElement 
         return Math.round(weightedScore * this.developerFundamentalsTotalQuestions);
     }
 
+    get developerFundamentalsSectionPercentage(){
+        return Math.round(this.developerFundamentals * this.developerFundamentalsWeight * 100) / 100;
+    }
+
+    get processAutomationTotalQuestions(){
+        return Math.round(this.numberOfQuestion * this.processAutomationWeight);
+    }
+
+    get processAutomationCorrectQuestions(){
+        let weightedScore = this.processAutomationScore/this.processAutomationWeight
+        weightedScore = weightedScore / 100; //get weighted percentage
+        return Math.round(weightedScore * this.processAutomationTotalQuestions);
+    }
+
+    get processAutomationSectionPercentage(){
+        return  Math.round(this.processAutomation * this.processAutomationWeight * 100) / 100;
+    }
+
+    get userInterfaceTotalQuestions(){
+        return Math.round(this.numberOfQuestion * this.userInterfaceWeight);
+    }
+
+    get userInterfaceCorrectQuestions(){
+        let weightedScore = this.userInterfaceScore/this.userInterfaceWeight
+        weightedScore = weightedScore / 100; //get weighted percentage
+        return Math.round(weightedScore * this.userInterfaceTotalQuestions);
+    }
+
+    get userInterfaceSectionPercentage(){
+        return  Math.round(this.userInterface * this.userInterfaceWeight * 100) / 100;
+    }
+
+    get testingDebugTotalQuestions(){
+        return Math.round(this.numberOfQuestion * this.testingDebugWeight);
+    }
+
+    get testingDebugCorrectQuestions(){
+        let weightedScore = this.testingDebugScore/this.testingDebugWeight
+        weightedScore = weightedScore / 100; //get weighted percentage
+        return Math.round(weightedScore * this.testingDebugTotalQuestions);
+    }
+
+    get testingDebugSectionPercentage(){
+        return Math.round(this.testingDebug * this.testingDebugWeight * 100) / 100;
+    }
+
 }
