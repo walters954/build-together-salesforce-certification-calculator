@@ -1,15 +1,15 @@
 # Salesforce Certification Calculator
 ### _[Salesforce Mentor - Build Together](https://courses.salesforcementor.com/)_
 
-A month-long project you build on a team of 2-3 with other learning Salesforce developers. Small teams will work together to complete development assignments. A weekly meeting with experienced developers to go over questions and review code. Get actual hands-on experience by working on projects, in a team with requirements.
+A month-long project you build on a team of 2-3 with other learning Salesforce developers. Small teams will work together to complete development assignments. Join weekly meetings with experienced developers to go over questions and review code.
 
 ## Overview
-Create to calculate the weighted score from Salesforce certifications available on Trailhead. Use LWC, HTML, JS, CSS, and other Salesforce development frameworks to create a UI and backend to dynamically render and calculate the scores. 
+Create an LWC calculator for Salesforce certifications. Use LWC, HTML, JS, CSS, and other Salesforce development frameworks to create a UI and backend to dynamically render and calculate the scores. 
 [All certification calculations can be found on Trailhead on the exam guides.](https://trailhead.salesforce.com/en/credentials/administratoroverview/) 
-- Initially start with PD1 then change program to be dynamic.
+- Start with PD1 then update the calculator to work with other certifications.
 
 ## Project Requirements  
-- ~~Ability to select multiple certifications to calculate score - fields will be dynamic~~
+- Ability to select multiple certifications to calculate score - fields will be dynamic
 - Ability to input certification scored for each section of platform developer 1 certification
 - Button to initiate the calculate functionality 
 - Once calculated show your score compared to the score needed to pass
